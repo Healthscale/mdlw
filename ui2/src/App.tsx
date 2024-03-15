@@ -34,7 +34,7 @@ const App: React.FC = () => {
   return (
     <>
       <div >
-        <div className='mesh-background'>
+        <div className='mesh-background' style={{ backgroundImage: "https://samrakh.com/bg1.svg"}} >
           <section className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="container">
               {/* <div className="px-md-5">
@@ -100,7 +100,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </section >
-          <section id='contact' className="d-flex justify-content-center align-items-center footer-background" style={{ height: '100vh' }}>
+          <section id='contact' className="d-flex justify-content-center align-items-center footer-background" style={{ backgroundImage: "https://samrakh.com/ftbg.svg", height: '80vh' }}>
             <div className="container" style={{ width: '60%' }}>
               <div className='row bg-dark p-4 rounded-lg text-center'>
                 <div className="col-md-6 d-flex align-items-center">
