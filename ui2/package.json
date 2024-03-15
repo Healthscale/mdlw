@@ -32,7 +32,7 @@
     "clean_build": "rm -rf build.tar.gz && rm -rf build && mkdir build && npm run build && cd build && tar -zcvf ../build.tar.gz * && cd ..",
     "clean_serve": "rm -rf build && mkdir build && tar -zxvf build.tar.gz -C build && serve -s build",
     "serve": "serve -s build",
-    "build_docs": "npm run build && rm -rf ../docs && mv build ../docs"
+    "build_docs": "npm run build && cp ../CNAME build/ && rm -rf ../docs && mv build ../docs"
   },
   "eslintConfig": {
     "extends": [
