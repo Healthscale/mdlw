@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactDOMServer from 'react-dom/server';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import SvgComponent from './graph';
@@ -31,6 +32,10 @@ const App: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const svgString = encodeURIComponent(
+    ReactDOMServer.renderToStaticMarkup(<Footerbg />)
+  );
 
   return (
     <>
@@ -100,8 +105,11 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
+            {/* <section>
+              <Footerbg />
+            </section> */}
           </section >
-          <section id='contact' className="d-flex justify-content-center align-items-center footer-background" style={{ backgroundImage: `url(${Footerbg})`, height: '80vh' }}>
+          <section id='contact' className="d-flex justify-content-center align-items-center" style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")`, height: '80vh' }}>
             <div className="container" style={{ width: '60%' }}>
               <div className='row bg-dark p-4 rounded-lg text-center'>
                 <div className="col-md-6 d-flex align-items-center">
