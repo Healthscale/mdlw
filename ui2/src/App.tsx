@@ -5,6 +5,7 @@ import SvgComponent from './graph';
 import EnterpriseAIIcon from './obserbox';
 import ComplianceIcon from './comp2';
 import './back.css';
+import Footerbg from './footerbg';
 
 const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -100,7 +101,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </section >
-          <section id='contact' className="d-flex justify-content-center align-items-center footer-background" style={{ backgroundImage: "https://samrakh.com/ftbg.svg", height: '80vh' }}>
+          <section id='contact' className="d-flex justify-content-center align-items-center footer-background" style={{ backgroundImage: `url(${Footerbg})`, height: '80vh' }}>
             <div className="container" style={{ width: '60%' }}>
               <div className='row bg-dark p-4 rounded-lg text-center'>
                 <div className="col-md-6 d-flex align-items-center">
