@@ -1,47 +1,44 @@
-import React, { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import SvgComponent from './graph';
-import EnterpriseAIIcon from './obserbox';
-import ComplianceIcon from './comp2';
-import './back.css';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
+import './navb.css'; 
 
-const Navb: React.FC = () => {
-  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+const Navb = () => {
+  const [buttonVariant, setButtonVariant] = useState('outline-dark');
+  const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-     if (window.scrollY > 50) {
-        setIsNavbarFixed(true);
-      } else {
-        setIsNavbarFixed(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    window.onscroll = () => {
+      setIsTop(window.pageYOffset === 0);
     };
   }, []);
 
-    return (
-        <Navbar bg="dark" variant="dark" expand="lg" fixed={isNavbarFixed ? "top" : undefined}>
-        <div className="container">
-          <Navbar.Brand href="#">Mdlw.dev</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav className="ml-auto">
-              {/* <Nav.Link href="#">Home</Nav.Link> */}
-              {/* <Nav.Link href="#">Contact</Nav.Link> */}
-              {/* book a demo button */}
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#contact" className="btn btn-primary">Book a demo</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </div>
-      </Navbar>
-    )
-}
+  return (
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className={isTop ? 'p-3' : 'shadow-sm p-3'}>
+      <Navbar.Brand href="#home" className="ml-7 font-weight-bold">
+        <span style={{fontWeight: "bold"}}>ObzerveAI</span>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mx-auto">
+          <Nav.Link className="nav-link-lg mr-3 font-weight-bold" href="#features">Features</Nav.Link>
+          <NavDropdown className="nav-link-lg font-weight-bold" title="Resources" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
+            <NavDropdown.Item href="#whitepapers">White Papers</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Button
+          variant={buttonVariant}
+          className="ml-2 mr-5"
+          onMouseEnter={() => setButtonVariant('dark')}
+          onMouseLeave={() => setButtonVariant('outline-dark')}
+          onMouseDown={() => setButtonVariant('light')}
+          onMouseUp={() => setButtonVariant('dark')}
+        >
+          Schedule a Demo
+        </Button>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+};
 
 export default Navb;

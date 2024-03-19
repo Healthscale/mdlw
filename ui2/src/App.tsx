@@ -7,6 +7,8 @@ import EnterpriseAIIcon from './obserbox';
 import ComplianceIcon from './comp2';
 import './back.css';
 import Footerbg from './footerbg';
+import Mainbg from './mainbg';
+import Blurbg from './blurbg';
 
 const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,20 +39,20 @@ const App: React.FC = () => {
     ReactDOMServer.renderToStaticMarkup(<Footerbg />)
   );
 
+  const mainbgString = encodeURIComponent(
+    ReactDOMServer.renderToStaticMarkup(<Mainbg />)
+  );
+
+
   return (
     <>
       <div >
-        <div className='mesh-background' style={{ backgroundImage: "https://samrakh.com/bg1.svg"}} >
+        <div className='mesh-background' style={{ backgroundImage: `url("data:image/svg+xml,${mainbgString}")`}} >
           <section className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="container">
-              {/* <div className="px-md-5">
-            <h1 className="text-center" style={{ fontSize: '4rem' }}>
-              <span style={{ color: '#FF7074' }}>Mdlw</span>
-            </h1>
-          </div> */}
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="text-center" style={{ fontSize: '4rem', fontFamily: "Rubik" }}>
-                  Middleware for your <span style={{}}>AI</span> applications and models
+                <p className="text-center" style={{ fontSize: '4rem', fontFamily: "Rubik", fontWeight: 800 }}>
+                  Middleware for your AI applications and models
                 </p>
               </div>
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
