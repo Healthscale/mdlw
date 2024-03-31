@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
-import './navb.css'; 
+import './navb.css';
 
 const Navb = () => {
   const [buttonVariant, setButtonVariant] = useState('outline-dark');
@@ -13,17 +13,17 @@ const Navb = () => {
   }, []);
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className={isTop ? 'p-3' : 'shadow-sm p-3'}>
-      <Navbar.Brand href="#home" className="ml-7 font-weight-bold">
-        <span style={{fontWeight: "bold"}}>ObzerveAI</span>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className={isTop ? 'px-3' : 'shadow-sm px-3'}>
+      <Navbar.Brand href="#home" className="ml-7 font-weight-bold text-dark">
+        <span style={{ fontWeight: "bold", fontSize: '1.5em' }}>ObzerveAI</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mx-auto">
-          <Nav.Link className="nav-link-lg mr-3 font-weight-bold" href="#features">Features</Nav.Link>
-          <NavDropdown className="nav-link-lg font-weight-bold" title="Resources" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#discord">Discord</NavDropdown.Item>
-            <NavDropdown.Item href="#whitepapers">White Papers</NavDropdown.Item>
+          <Nav.Link className="nav-link-lg mr-3 font-weight-bold text-dark ml-auto" href="#features" style={{ fontSize: '1.2em' }}>Features</Nav.Link>
+          <NavDropdown className="nav-link-lg font-weight-bold text-dark" title="Resources" id="collasible-nav-dropdown" style={{ fontSize: '1.2em' }}>
+            <NavDropdown.Item href="#discord" style={{ fontSize: '1.2em' }}>Discord</NavDropdown.Item>
+            <NavDropdown.Item href="#whitepapers" style={{ fontSize: '1.2em' }}>White Papers</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Button
