@@ -6,6 +6,7 @@ import SvgComponent from './graph';
 import EnterpriseAIIcon from './obserbox';
 import ComplianceIcon from './comp2';
 import './back.css';
+import "./App.css";
 import Footerbg from './footerbg';
 import Mainbg from './mainbg';
 import Blurbg from './blurbg';
@@ -51,12 +52,12 @@ const App: React.FC = () => {
           <section className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="container">
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="text-center" style={{ fontSize: '4.5vw', fontFamily: "Noto Sans"}}>
+                <p className="text-center" style={{ fontFamily: "Noto Sans"}}>
                   Middleware for your AI applications and models
                 </p>
               </div>
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="text-center" style={{ color: '#FF7074', fontSize: '2.5vw', fontFamily: "Noto Sans" }}>
+                <p className="text-center-2" style={{ color: '#FF7074', fontFamily: "Noto Sans" }}>
                   Deploy and manage your LLM applications with confidence, integrate with 3rd party vendors. Get actionable insights and visbility and scale better.
                 </p>
               </div>
