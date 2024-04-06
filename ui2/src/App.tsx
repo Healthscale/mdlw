@@ -48,16 +48,17 @@ const App: React.FC = () => {
   return (
     <>
       <div >
-        <div className='mesh-background' style={{ backgroundImage: `url("data:image/svg+xml,${mainbgString}")`}} >
+        {/* <div className='mesh-background' style={{ backgroundImage: `url("data:image/svg+xml,${mainbgString}")`}} > */}
+        <div>
           <section className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="container">
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="text-center" style={{ fontFamily: "Noto Sans"}}>
+                <p className="head-text-center" style={{ fontFamily: "Noto Sans"}}>
                   Middleware for your AI applications and models
                 </p>
               </div>
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="text-center-2" style={{ color: '#FF7074', fontFamily: "Noto Sans" }}>
+                <p className="head-text-center-2" style={{ color: '#811331', fontFamily: "Noto Sans" }}>
                   Deploy and manage your LLM applications with confidence, integrate with 3rd party vendors. Get actionable insights and visbility and scale better.
                 </p>
               </div>
@@ -65,14 +66,14 @@ const App: React.FC = () => {
           </section>
           <section id="features" className="py-5" style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}>
             <div className="container">
-              <h1 className="text-center mb-5 font-weight-bold">Features</h1>
+              <h1 className="feature-text-center mb-5 font-weight-bold">Features</h1>
               <div className="row">
                 <div className="col-md-6 d-flex align-items-center">
                   <SvgComponent style={{ width: '60%', height: '60%' }} />
                 </div>
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h3>Access Control</h3>
+                    <h2>Access Control</h2>
                     <p>Add user authentication and add rules based on vector db context. Aggressively restrict untoward queries.</p>
                   </div>
                 </div>
@@ -80,7 +81,7 @@ const App: React.FC = () => {
               <div className="row">
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h3>Observability</h3>
+                    <h2>Observability</h2>
                     <ul>
                       <li>Efficiently log and monitor usage.</li>
                       <li>Tailor made for LLM usage and get insights on your vector database and model usage.</li>
@@ -98,7 +99,7 @@ const App: React.FC = () => {
                 </div>
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h3>Compliance</h3>
+                    <h2>Compliance</h2>
                     <ul>
                       <li>Efficiently log and monitor usage.</li>
                       <li>Tailor made for LLM usage and get insights on your vector database and model usage.</li>

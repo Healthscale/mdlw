@@ -13,9 +13,9 @@ const Navb = () => {
   }, []);
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className={isTop ? 'px-3' : 'shadow-sm px-3'}>
-      <Navbar.Brand href="#home" className="ml-7 font-weight-bold text-dark">
-        <span style={{ fontWeight: "bold", fontSize: '1.5em' }}>ObzerveAI</span>
+    <Navbar style={{ paddingTop: "1rem" }} collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className={isTop ? 'px-3' : 'shadow-sm px-3'}>
+      <Navbar.Brand href="#home" className="ml-7 font-weight-bold text-dark" style={{"paddingLeft": '8%' }} >
+        <span style={{ fontWeight: "bold", fontSize: '1.5em', color: '#811331' }}>ObzerveAI</span>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,6 +26,7 @@ const Navb = () => {
             <NavDropdown.Item href="#whitepapers" style={{ fontSize: '1.2em' }}>White Papers</NavDropdown.Item>
           </NavDropdown>
         </Nav>
+        <div style={{ "paddingRight": "8%" }}>
         <Button
           variant={buttonVariant}
           className="ml-2 mr-5"
@@ -36,6 +37,7 @@ const Navb = () => {
         >
           Schedule a Demo
         </Button>
+        </div>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -33,7 +33,7 @@
     "clean_serve": "rm -rf build && mkdir build && tar -zxvf build.tar.gz -C build && serve -s build",
     "serve": "serve -s build",
     "build_docs": "rm -rf ../docs && npm run build && mv build ../docs && cp ../tmp/CNAME ../docs/",
-    "build_docs_push": "npm run build_docs && cd .. && git add . && git commit -m 'Auto push' && git push"
+    "build_docs_push": "npm run build_docs && cd .. && git add . && git commit -m 'Auto push' && git push origin master"
   },
   "eslintConfig": {
     "extends": [

@@ -37,22 +37,43 @@
   }
 }
 
-.text-center {
+.head-text-center {
   font-size: 4.5vw;
 }
 
 @media (max-width: 768px) {
-  .text-center {
+  .head-text-center {
     font-size: 28px;
   }
 }
 
-.text-center-2 {
+.head-text-center-2 {
   font-size: 2.5vw;
 }
 
 @media (max-width: 768px) {
-  .text-center-2 {
+  .head-text-center-2 {
+    font-size: 16px;
+  }
+}
+
+.feature-text-center {
+  font-size: 3.5vw;
+}
+
+@media (max-width: 768px) {
+  .feature-text-center {
+    font-size: 20px;
+  }
+}
+
+
+.feature-mid-text-center {
+  font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+  .feature-mid-text-center {
     font-size: 16px;
   }
 }
