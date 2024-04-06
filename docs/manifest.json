@@ -11,6 +11,10 @@
       "src": "favicon.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "oilt.png",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
