@@ -11,6 +11,7 @@ import Footerbg from './footerbg';
 import Mainbg from './mainbg';
 import Blurbg from './blurbg';
 import pkgImg from "./assets/pkg1.png";
+import pkgImg2 from "./assets/pkg2.png";
 
 const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -131,22 +132,44 @@ const App: React.FC = () => {
           {/* section has background color #811331 */}
           <section className="py-5" style={{ backgroundColor: '#811331' }}>
             <div className="container">
+              <h1 className="feature-text-center mb-5 font-weight-bold text-light">Getting started</h1>
               <div className="row">
                 <div className="col-md-6 d-flex align-items-center">
                   <div>
-                    <h2 className="text-light">Getting started</h2>
                     <p className="text-light">
-                      <ul>
-                        <li>Install, `pip install obzerveai`</li>
-                        <li>Integrate, import the package and use directly</li>
-                        <li><a href="https://pypi.org/project/obzerveai/" style={{ color: 'inherit' }}>Obzerve</a>, included time series db and graph</li>
-                      </ul>
+                      <h4>
+                        <ul>
+                          <li>Install, `pip install obzerveai`</li>
+                          <li>Integrate, import the package and use directly</li>
+                        </ul>
+                        Need support for any other languge ? Connect with us.
+                      </h4>
                     </p>
                   </div>
                 </div>
                 <div className="col-md-6 d-flex align-items-center">
                   {/* insert image with path href="%PUBLIC_URL%/pkg1.png" */}
-                  <img src={pkgImg} alt="Image" />;
+                  {/* max width of the image can be 90% of screen width */}
+                  <img src={pkgImg} alt="package" style={{ width: '90%' }} />
+                </div>
+              </div>
+              <div className="row">
+              <div className="col-md-6 d-flex align-items-center">
+                  {/* insert image with path href="%PUBLIC_URL%/pkg1.png" */}
+                  {/* max width of the image can be 90% of screen width */}
+                  <img src={pkgImg2} alt="package" style={{ width: '90%' }} />
+                </div>
+                <div className="col-md-6 d-flex align-items-center">
+                  <div>
+                    <p className="text-light">
+                      <h4>
+                        <ul>
+                          <li><a href="https://pypi.org/project/obzerveai/" style={{ color: 'inherit' }}>Obzerve</a>, included time series db and graph</li>
+
+                        </ul>
+                      </h4>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
