@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <section className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="container">
               <div className="px-md-5"> {/* Adding padding on medium and larger screens */}
-                <p className="head-text-center" style={{ fontFamily: "Noto Sans"}}>
+                <p className="head-text-center" style={{ fontFamily: "Noto Sans" }}>
                   Middleware for your AI applications and models
                 </p>
               </div>
@@ -73,7 +73,7 @@ const App: React.FC = () => {
                 </div>
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h2>Access Control</h2>
+                    <h2 style={{ color: '#811331' }}>Access Control</h2>
                     <p>Add user authentication and add rules based on vector db context. Aggressively restrict untoward queries.</p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ const App: React.FC = () => {
               <div className="row">
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h2>Observability</h2>
+                    <h2 style={{ color: '#811331' }}>Observability</h2>
                     <ul>
                       <li>Efficiently log and monitor usage.</li>
                       <li>Tailor made for LLM usage and get insights on your vector database and model usage.</li>
@@ -99,7 +99,7 @@ const App: React.FC = () => {
                 </div>
                 <div className='col-md-6 d-flex align-items-center'>
                   <div>
-                    <h2>Compliance</h2>
+                    <h2 style={{ color: '#811331' }}>Compliance</h2>
                     <ul>
                       <li>Efficiently log and monitor usage.</li>
                       <li>Tailor made for LLM usage and get insights on your vector database and model usage.</li>
@@ -109,9 +109,6 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* <section>
-              <Footerbg />
-            </section> */}
           </section >
           <section id='contact' className="d-flex justify-content-center align-items-center" style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")`, height: '80vh' }}>
             <div className="container" style={{ width: '60%' }}>

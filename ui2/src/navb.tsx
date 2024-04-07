@@ -20,20 +20,31 @@ const Navb = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mx-auto">
-          <Nav.Link className="nav-link-lg mr-3 font-weight-bold text-dark ml-auto" href="#features" style={{ fontSize: '1.2em' }}>Features</Nav.Link>
-          <NavDropdown className="nav-link-lg font-weight-bold text-dark" title="Resources" id="collasible-nav-dropdown" style={{ fontSize: '1.2em' }}>
-            <NavDropdown.Item href="#discord" style={{ fontSize: '1.2em' }}>Discord</NavDropdown.Item>
-            <NavDropdown.Item href="#whitepapers" style={{ fontSize: '1.2em' }}>White Papers</NavDropdown.Item>
+          <Nav.Link className="nav-link-lg mr-3 font-weight-bold text-dark ml-auto nav-link-hover" href="#features" style={{fontSize: '1.2em'}}>Features</Nav.Link>
+          <NavDropdown className="nav-link-lg font-weight-bold text-dark nav-link-hover" title="Resources" id="collasible-nav-dropdown" style={{fontSize: '1.2em'}}>
+            <NavDropdown.Item href="#discord" style={{fontSize: '1.2em'}}>Discord</NavDropdown.Item>
+            <NavDropdown.Item href="#whitepapers" style={{fontSize: '1.2em'}}>White Papers</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <div style={{ "paddingRight": "8%" }}>
         <Button
-          variant={buttonVariant}
-          className="ml-2 mr-5"
-          onMouseEnter={() => setButtonVariant('dark')}
-          onMouseLeave={() => setButtonVariant('outline-dark')}
+          className="ml-2 mr-5 rounded-pill"
+          onMouseEnter={() => setButtonVariant('light')}
+          onMouseLeave={() => setButtonVariant('dark')}
           onMouseDown={() => setButtonVariant('light')}
           onMouseUp={() => setButtonVariant('dark')}
+          style={{
+            backgroundColor: '#811331',
+            color: 'white',
+            fontWeight: 'bold',
+            transition: 'background-color 0.3s ease'
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = '#9a3547';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = '#811331';
+          }}
         >
           Schedule a Demo
         </Button>

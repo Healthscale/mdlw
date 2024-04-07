@@ -6,12 +6,12 @@ function Footerbg() {
       <path fill="#fff" d="M0 0H1600V900H0z"></path>
       <defs>
         <linearGradient id="a" x1="0" x2="0" y1="1" y2="0">
-          <stop offset="0" stopColor="red"></stop>
-          <stop offset="1" stopColor="red"></stop>
+          <stop offset="0" stopColor="#811331"></stop>
+          <stop offset="1" stopColor="#811331"></stop>
         </linearGradient>
         <linearGradient id="b" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="red"></stop>
-          <stop offset="1" stopColor="red"></stop>
+          <stop offset="0" stopColor="#811331"></stop>
+          <stop offset="1" stopColor="#811331"></stop>
         </linearGradient>
       </defs>
       <g fill="#FFF" fillOpacity="0" strokeMiterlimit="10">
