@@ -22,7 +22,7 @@ const Navb = () => {
         <Nav className="mx-auto">
           <Nav.Link className="nav-link-lg mr-3 font-weight-bold text-dark ml-auto nav-link-hover" href="#features" style={{fontSize: '1.2em'}}>Features</Nav.Link>
           <NavDropdown className="nav-link-lg font-weight-bold text-dark nav-link-hover" title="Resources" id="collasible-nav-dropdown" style={{fontSize: '1.2em'}}>
-            <NavDropdown.Item href="#discord" style={{fontSize: '1.2em'}}>Discord</NavDropdown.Item>
+            <NavDropdown.Item href="https://discord.gg/C8VxyACn" style={{fontSize: '1.2em'}}>Discord</NavDropdown.Item>
             <NavDropdown.Item href="#whitepapers" style={{fontSize: '1.2em'}}>White Papers</NavDropdown.Item>
           </NavDropdown>
         </Nav>
