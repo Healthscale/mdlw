@@ -10,6 +10,7 @@ import "./App.css";
 import Footerbg from './footerbg';
 import Mainbg from './mainbg';
 import Blurbg from './blurbg';
+import pkgImg from "./assets/pkg1.png";
 
 const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,6 +65,23 @@ const App: React.FC = () => {
               </div>
             </div>
           </section>
+          <section className="py-5" style={{ backgroundColor: '#811331' }}>
+            <p className="text-light">
+              <div className="container align-items-center">
+                <div className="row">
+                  <div className="col-md-4 d-flex align-items-center">
+                    <h3>Build smarter</h3>
+                  </div>
+                  <div className="col-md-4 d-flex align-items-center">
+                    <h3>Build securely</h3>
+                  </div>
+                  <div className="col-md-4 d-flex align-items-center">
+                    <h3>Build anywhere</h3>
+                  </div>
+                </div>
+              </div>
+            </p>
+          </section>
           <section id="features" className="py-5" style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.5s ease-in-out' }}>
             <div className="container">
               <h1 className="feature-text-center mb-5 font-weight-bold">Features</h1>
@@ -110,7 +128,30 @@ const App: React.FC = () => {
               </div>
             </div>
           </section >
-          <section id='contact' className="d-flex justify-content-center align-items-center" style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")`, height: '80vh' }}>
+          {/* section has background color #811331 */}
+          <section className="py-5" style={{ backgroundColor: '#811331' }}>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 d-flex align-items-center">
+                  <div>
+                    <h2 className="text-light">Getting started</h2>
+                    <p className="text-light">
+                      <ul>
+                        <li>Install, `pip install obzerveai`</li>
+                        <li>Integrate, import the package and use directly</li>
+                        <li><a href="https://pypi.org/project/obzerveai/" style={{ color: 'inherit' }}>Obzerve</a>, included time series db and graph</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6 d-flex align-items-center">
+                  {/* insert image with path href="%PUBLIC_URL%/pkg1.png" */}
+                  <img src={pkgImg} alt="Image" />;
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id='contact' className="d-flex justify-content-center align-items-center" style={{ backgroundImage: `url("data:image/svg+xml,${svgString}")`, height: '50vh' }}>
             <div className="container" style={{ width: '60%' }}>
               <div className='row bg-dark p-4 rounded-lg text-center'>
                 <div className="col-md-6 d-flex align-items-center">
